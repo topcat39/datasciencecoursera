@@ -2,6 +2,21 @@
 ## An initial matrix must be created first, using
 ##    makeCacheMatrix
 
+##  To test:
+## mx <- makeCacheMatrix()
+## mx$set(matrix(runif(16), 4, 4))
+## cacheSolve(mx)
+## # subsequent calls to cacheSolve will get previous results
+## x <- mx$get()
+## y <- cacheSolve(mx)
+## trunc(x %*% y)
+
+## Sample output of trunc(x %*% y)
+## [,1] [,2] [,3] [,4]
+## [1,]    0    0    0    0
+## [2,]    0    1    0    0
+## [3,]    0    0    1    0
+## [4,]    0    0    0    1
 
 ## makeCacheMatrix - creates a Matrix that acts like a class
 ##    sets/gets the value of the matrix
